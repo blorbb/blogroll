@@ -1,0 +1,85 @@
+:root {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+
+  font-size: clamp(16px, 14.608px + 0.4348vw, 20px);
+  line-height: 1.5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  box-sizing: border-box;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  tab-size: 4;
+  scroll-padding-top: 3rem;
+
+  background-color: #1d2021;
+  color: #ebdbb2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+
+  overflow-wrap: break-word;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+main {
+  --content-max-width: 35rem;
+  --content-min-margin: 1rem;
+  --content-width: min(var(--content-max-width), calc(100% - var(--content-min-margin)));
+
+  padding-block: 1rem;
+}
+
+main > * {
+  width: var(--content-width);
+  margin-inline: auto;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Blogroll */
+li {
+  margin-block-start: 1em;
+}
+
+.eyebrow {
+  color: #d5c4a1;
+}
+
+.title {
+  font-size: 1.5rem;
+  display: block;
+  color: #83a598;
+}
