@@ -5,7 +5,7 @@ use chrono::{DateTime, Duration, Utc};
 use maud::{Render, html};
 use reqwest::Url;
 
-const MIN_ENTRIES: usize = 10;
+const MIN_ENTRIES: usize = 5;
 const MIN_PUBLISHED_TIME: Duration = Duration::days(7);
 
 struct Entry {

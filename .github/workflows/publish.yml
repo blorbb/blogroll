@@ -10,8 +10,8 @@ on:
   workflow_dispatch:
 
   schedule:
-    # Around midnight melbourne time
-    - cron: "0 13 * * *"
+    # Around 8am melbourne time in UTC
+    - cron: "0 21 * * *"
 
 jobs:
   build:

@@ -9,6 +9,7 @@ https://jonathan-frere.com/index.xml
 https://jyn.dev/atom.xml
 https://kobzol.github.io/feed.xml
 https://matklad.github.io/feed.xml
+https://mcyoung.xyz/feed.xml
 https://mmapped.blog/feed.xml
 https://neugierig.org/software/blog/atom.xml
 https://smallcultfollowing.com/babysteps/atom.xml
