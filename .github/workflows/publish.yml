@@ -24,7 +24,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: Swatinem/rust-cache@v2
-      - run: cargo run -- ./out
+        with:
+          cache-workspace-crates: true
+      - run: cargo run -- ./feeds.txt ./out
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out

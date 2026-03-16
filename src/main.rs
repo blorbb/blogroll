@@ -16,13 +16,20 @@ struct Entry {
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    let out_dir = PathBuf::from(
+    let urls_path = PathBuf::from(
         std::env::args()
             .nth(1)
+            .context("missing urls file argument")?,
+    );
+
+    let out_dir = PathBuf::from(
+        std::env::args()
+            .nth(2)
             .context("missing output dir argument")?,
     );
 
-    let urls = include_str!("./feeds.txt").trim().lines();
+    let urls = fs::read_to_string(urls_path)?;
+    let urls = urls.trim().lines();
     let entries = get_all_entries(urls).await?;
 
     let html = html! {

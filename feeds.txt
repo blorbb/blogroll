@@ -12,9 +12,11 @@ https://matklad.github.io/feed.xml
 https://mcyoung.xyz/feed.xml
 https://mmapped.blog/feed.xml
 https://neugierig.org/software/blog/atom.xml
+https://purplesyringa.moe/blog/feed.rss
 https://smallcultfollowing.com/babysteps/atom.xml
 https://thunderseethe.dev/posts/index.xml
 https://tonsky.me/atom.xml
 https://typesanitizer.com/blog/rss.xml
 https://without.boats/index.xml
+https://www.harudagondi.space/rss.xml
 https://www.scattered-thoughts.net/atom.xml
