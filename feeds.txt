@@ -3,6 +3,7 @@ https://burntsushi.net/index.xml
 https://daymare.net/atom.xml
 https://glfmn.io/atom.xml
 https://graydon2.dreamwidth.org/data/atom
+https://iev.ee/rss.xml
 https://jack.wrenn.fyi/atom.xml
 https://jacko.io/rss.xml
 https://jonathan-frere.com/index.xml
