@@ -1,4 +1,4 @@
-https://blog.yoshuawuyts.com/rss.1o3a653a235o.xml
+https://blog.yoshuawuyts.com/rss.xml
 https://burntsushi.net/index.xml
 https://daymare.net/atom.xml
 https://glfmn.io/atom.xml
