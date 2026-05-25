@@ -22,3 +22,4 @@ https://typesanitizer.com/blog/rss.xml
 https://without.boats/index.xml
 https://www.harudagondi.space/rss.xml
 https://www.scattered-thoughts.net/atom.xml
+https://yosefk.com/blog/feed
