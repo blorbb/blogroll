@@ -1,13 +1,17 @@
 https://blog.yoshuawuyts.com/rss.xml
 https://burntsushi.net/index.xml
+https://callmeo.live/feed.xml
 https://daymare.net/atom.xml
+https://fasterthanli.me/index.xml
 https://glfmn.io/atom.xml
 https://graydon2.dreamwidth.org/data/atom
 https://iev.ee/rss.xml
 https://jack.wrenn.fyi/atom.xml
 https://jacko.io/rss.xml
+https://jmmv.dev/feed.xml
 https://joel.place/rss.xml
 https://jonathan-frere.com/index.xml
+https://jvns.ca/atom.xml
 https://jyn.dev/atom.xml
 https://kobzol.github.io/feed.xml
 https://matklad.github.io/feed.xml
@@ -22,4 +26,5 @@ https://typesanitizer.com/blog/rss.xml
 https://without.boats/index.xml
 https://www.harudagondi.space/rss.xml
 https://www.scattered-thoughts.net/atom.xml
+https://xeiaso.net/blog.rss
 https://yosefk.com/blog/feed
