@@ -11,6 +11,7 @@ https://jacko.io/rss.xml
 https://jmmv.dev/feed.xml
 https://joel.place/rss.xml
 https://jonathan-frere.com/index.xml
+https://joshcollinsworth.com/api/rss.xml
 https://jvns.ca/atom.xml
 https://jyn.dev/atom.xml
 https://kobzol.github.io/feed.xml
