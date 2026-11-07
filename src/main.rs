@@ -63,17 +63,35 @@ async fn main() -> anyhow::Result<()> {
 
 async fn get_all_entries(urls: impl IntoIterator<Item = &str>) -> anyhow::Result<Vec<Entry>> {
     let client = reqwest::Client::new();
-    let mut feeds = futures::future::try_join_all(urls.into_iter().map(async |url| {
-        get_url_entries(&client, url)
-            .await
-            .context(format!("failed at {url}"))
-    }))
-    .await?
-    .into_iter()
-    .flatten()
-    .collect::<Vec<_>>();
+    let mut feeds =
+        futures::future::try_join_all(urls.into_iter().map(|url| periodic_retry(&client, url)))
+            .await?
+            .into_iter()
+            .flatten()
+            .collect::<Vec<_>>();
     feeds.sort_by_key(|entry| Reverse(entry.dt));
     Ok(feeds)
+}
+
+async fn periodic_retry(
+    client: &reqwest::Client,
+    url: &str,
+) -> anyhow::Result<impl Iterator<Item = Entry>> {
+    const ATTEMPTS: usize = 3;
+    for i in 1..=ATTEMPTS {
+        match get_url_entries(client, url).await {
+            Ok(ok) => return Ok(ok),
+            Err(e) => {
+                eprintln!("{url}: attempt {i} failed: {e}");
+                if i == ATTEMPTS {
+                    return Err(e);
+                } else {
+                    tokio::time::sleep(std::time::Duration::from_secs(5)).await
+                }
+            }
+        }
+    }
+    panic!("attempts should be non zero")
 }
 
 async fn get_url_entries(
