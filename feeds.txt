@@ -18,6 +18,7 @@ https://kobzol.github.io/feed.xml
 https://matklad.github.io/feed.xml
 https://mcyoung.xyz/feed.xml
 https://mmapped.blog/feed.xml
+https://blog.ncase.me/rss/
 https://neugierig.org/software/blog/atom.xml
 https://purplesyringa.moe/blog/feed.rss
 https://smallcultfollowing.com/babysteps/atom.xml
