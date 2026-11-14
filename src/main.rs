@@ -30,7 +30,7 @@ async fn main() -> anyhow::Result<()> {
 
     let urls = fs::read_to_string(urls_path)?;
     let urls = urls.trim().lines();
-    let entries = get_all_entries(urls).await?;
+    let entries = get_all_entries(urls).await;
 
     let html = html! {
         (maud::DOCTYPE)
@@ -61,16 +61,18 @@ async fn main() -> anyhow::Result<()> {
     Ok(())
 }
 
-async fn get_all_entries(urls: impl IntoIterator<Item = &str>) -> anyhow::Result<Vec<Entry>> {
+async fn get_all_entries(urls: impl IntoIterator<Item = &str>) -> Vec<Entry> {
     let client = reqwest::Client::new();
+    // ignores errors
     let mut feeds =
-        futures::future::try_join_all(urls.into_iter().map(|url| periodic_retry(&client, url)))
-            .await?
+        futures::future::join_all(urls.into_iter().map(|url| periodic_retry(&client, url)))
+            .await
             .into_iter()
+            .flatten()
             .flatten()
             .collect::<Vec<_>>();
     feeds.sort_by_key(|entry| Reverse(entry.dt));
-    Ok(feeds)
+    feeds
 }
 
 async fn periodic_retry(
